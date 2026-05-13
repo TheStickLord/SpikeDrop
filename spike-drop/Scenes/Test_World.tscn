@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cmshrt36w3glv"]
+
+[ext_resource type="PackedScene" uid="uid://25l5ucxfo5gm" path="res://Scenes/Player/Player.tscn" id="1_4ciqx"]
+
+[node name="TestWorld" type="Node3D" unique_id=1990735517]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=931162282]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+
+[node name="Player" parent="." unique_id=1286068107 instance=ExtResource("1_4ciqx")]
