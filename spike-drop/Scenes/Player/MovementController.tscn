@@ -1,3 +1,14 @@
 [gd_scene format=3 uid="uid://68m4d2a8sw0d"]
 
+[ext_resource type="Script" uid="uid://hw5etlb3tp2u" path="res://Scenes/Player/walk.gd" id="1_5g22s"]
+[ext_resource type="Script" uid="uid://ci4a24c6kbfnh" path="res://Scenes/Player/movement_controller.gd" id="1_24naf"]
+[ext_resource type="Script" uid="uid://bxinr1yrrbvov" path="res://Scenes/Player/idle.gd" id="3_u5lm8"]
+
 [node name="MovementController" type="Node" unique_id=599565209]
+script = ExtResource("1_24naf")
+
+[node name="Walk" type="Node" parent="." unique_id=22069757]
+script = ExtResource("1_5g22s")
+
+[node name="Idle" type="Node" parent="." unique_id=1709288738]
+script = ExtResource("3_u5lm8")

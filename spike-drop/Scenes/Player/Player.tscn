@@ -1,16 +1,25 @@
 [gd_scene format=3 uid="uid://25l5ucxfo5gm"]
 
+[ext_resource type="Script" uid="uid://bda86mkc8s8ef" path="res://Scenes/Player/player.gd" id="1_jmcll"]
 [ext_resource type="PackedScene" uid="uid://cdmc4kitcst6" path="res://Scenes/Player/PlayerView/PlayerView.tscn" id="1_ude3g"]
 [ext_resource type="PackedScene" uid="uid://c6o0a3idgbfda" path="res://Scenes/Player/FullBodyActionController.tscn" id="2_jmcll"]
 [ext_resource type="PackedScene" uid="uid://mbnskew6ocu8" path="res://Scenes/Player/HalfBodyController.tscn" id="3_4wape"]
 [ext_resource type="PackedScene" uid="uid://68m4d2a8sw0d" path="res://Scenes/Player/MovementController.tscn" id="4_t26db"]
 
-[node name="Player" type="Node3D" unique_id=1286068107]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jmcll"]
 
-[node name="PlayerView" parent="." unique_id=1493062332 instance=ExtResource("1_ude3g")]
+[node name="Player" type="Node3D" unique_id=1286068107]
+script = ExtResource("1_jmcll")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1269285117]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=604558526]
+shape = SubResource("CapsuleShape3D_jmcll")
+
+[node name="PlayerView" parent="CharacterBody3D" unique_id=1493062332 instance=ExtResource("1_ude3g")]
+
+[node name="MovementController" parent="." unique_id=599565209 instance=ExtResource("4_t26db")]
 
 [node name="FullBodyActionController" parent="." unique_id=1460527878 instance=ExtResource("2_jmcll")]
 
 [node name="HalfBodyController" parent="." unique_id=2127946657 instance=ExtResource("3_4wape")]
-
-[node name="MovementController" parent="." unique_id=599565209 instance=ExtResource("4_t26db")]

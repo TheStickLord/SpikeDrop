@@ -1,10 +1,21 @@
 [gd_scene format=3 uid="uid://cmshrt36w3glv"]
 
+[ext_resource type="Script" uid="uid://bagidfilr2wa6" path="res://Scenes/test_world.gd" id="1_0se7u"]
 [ext_resource type="PackedScene" uid="uid://25l5ucxfo5gm" path="res://Scenes/Player/Player.tscn" id="1_4ciqx"]
 
-[node name="TestWorld" type="Node3D" unique_id=1990735517]
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_4ciqx"]
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=931162282]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+[node name="TestWorld" type="Node3D" unique_id=1990735517]
+script = ExtResource("1_0se7u")
 
 [node name="Player" parent="." unique_id=1286068107 instance=ExtResource("1_4ciqx")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=921849091]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5028338, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=338181602]
+shape = SubResource("WorldBoundaryShape3D_4ciqx")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=626142492]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2212441, 0.3948264, -2.1014223)
+size = Vector3(4.553833, 2.3554688, 1)

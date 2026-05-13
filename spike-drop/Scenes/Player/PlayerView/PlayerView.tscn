@@ -3,3 +3,6 @@
 [node name="PlayerView" type="Node3D" unique_id=1493062332]
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="." unique_id=1117664989]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1478315698]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.547057)
