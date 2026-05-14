@@ -2,8 +2,10 @@ extends State
 
 @onready var walk: Node = $"../Walk"
 
+func enter() -> void:
+	requestAnimation.emit("idle")
+
 func process(context: PlayerContext, delta: float) -> State:
-	print("idle")
 
 	var direction := Input.get_axis("Left", "Right")
 

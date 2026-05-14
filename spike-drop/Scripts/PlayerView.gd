@@ -1,5 +1,5 @@
 extends Node
-class_name View
+class_name PlayerView
 
 func playAnimation(name: String):
 	pass

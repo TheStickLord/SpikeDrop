@@ -2,8 +2,10 @@ extends State
 
 @onready var idle: Node = $"../Idle"
 
+func enter() -> void:
+	requestAnimation.emit("walk")
+
 func process(context: PlayerContext, delta: float) -> State:
-	print("walk")
 	
 	var model = context.model
 	var body = context.body

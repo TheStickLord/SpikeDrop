@@ -4,7 +4,7 @@ class_name State
 @export var controller: Node
 
 # Signals PlayerView
-signal playAnimation(anim: String)
+signal requestAnimation(anim: String)
 
 func enter() -> void:
 	pass

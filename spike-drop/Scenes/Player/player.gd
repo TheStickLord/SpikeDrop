@@ -1,7 +1,8 @@
 extends Node3D
 
-#3D PhysBody
+#3D PhysBody/Body View
 @onready var character_body_3d: CharacterBody3D = $CharacterBody3D
+@onready var player_view: Node3D = $CharacterBody3D/PlayerView
 
 # Controllers
 @onready var movement_controller: Node = $MovementController
@@ -16,6 +17,8 @@ var ctx: PlayerContext
 
 func _ready() -> void:
 	ctx = PlayerContext.new(model, character_body_3d)
+	
+	movement_controller.setup(player_view)
 
 func _physics_process(delta: float) -> void:
 	#gravity
