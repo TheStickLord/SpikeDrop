@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cdmc4kitcst6"]
 
 [ext_resource type="Script" uid="uid://wl2wsosovw7" path="res://Scenes/Player/PlayerView/player_view.gd" id="1_wgafg"]
+[ext_resource type="Script" uid="uid://dntiuonw4ifpf" path="res://Scenes/Player/PlayerView/camera_3d.gd" id="2_k240s"]
 
 [node name="PlayerView" type="Node3D" unique_id=1493062332]
 script = ExtResource("1_wgafg")
@@ -9,3 +10,5 @@ script = ExtResource("1_wgafg")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1478315698]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.547057)
+fov = 90.0
+script = ExtResource("2_k240s")

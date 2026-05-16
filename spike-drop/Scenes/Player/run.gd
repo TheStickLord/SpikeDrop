@@ -24,7 +24,6 @@ func process(context: PlayerContext, delta: float) -> State:
 	if Input.is_action_just_released("Shift"):
 		return walk
 	
-	if abs(body.velocity.x) < model.sprint_speed:
-		body.velocity.x += direction * model.sprint_speed * 5 * (delta)
+	body.velocity.x = lerp(direction * model.speed, direction * model.sprint_speed, 2.0)
 	
 	return self
