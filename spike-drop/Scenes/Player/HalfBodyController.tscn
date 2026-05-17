@@ -1,3 +1,6 @@
 [gd_scene format=3 uid="uid://mbnskew6ocu8"]
 
+[ext_resource type="Script" uid="uid://dprep2qcdokr7" path="res://Scenes/Player/half_body_controller.gd" id="1_xdgmn"]
+
 [node name="HalfBodyController" type="Node" unique_id=2127946657]
+script = ExtResource("1_xdgmn")
